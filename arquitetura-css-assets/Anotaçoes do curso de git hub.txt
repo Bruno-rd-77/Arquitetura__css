@@ -1,0 +1,257 @@
+usando git bahs
+
+git --version{
+    mostra qual é a versão instalado do git hub;
+}
+
+cd "caminho ate a pasta" {
+    selecionar pasta;
+}
+
+ls {
+    visualizar quais arquivos tem na pasta;
+}
+
+git init {
+    comando para iniciar um repositorio;
+}
+
+git status {
+    qual e a situação do repositorio;
+}
+
+git add "nome do arquivo" {
+    adiciona um arquivo para monitoramento;
+}
+
+git add . {
+    adiciona todos os arquivos da pasta atual;
+}
+
+git status {
+    qual e a situação do repositorio;
+}
+
+git rm --cached "nome arquivo" {
+    faz o git parar de monitorar um arquivo;
+}
+
+git commit -m "mensagen" {
+    comando ára confirma alteraçoes em um arquivo com uma mensagem descritiva;
+}
+
+clear {
+    limpa a tela;
+}
+
+git commit -m "mensagen" {
+    comando ára confirma alteraçoes em um arquivo com uma mensagem descritiva;
+}
+
+git log {
+    mostra informaçoes gerais do repositorio;
+}
+
+git config --local user.name "Bruno Ribeiro"{
+    configurações com o paremetro local somente para esse repositorio alterando o nome do usuario;
+}
+
+git config --global user.name "Bruno Ribeiro" {
+   configurações com o paremetro global para a maquina no geral alterando o nome do usuario;
+}
+
+git config --local user.email "brunos0767@gmail.com" {
+    cinfigura o email do usuario somemnte ne=o repositorio local;
+}
+
+git log --oneline {
+    git log mostra todos os commits com o parametro "oneline" ficam todos em uma linha;
+}
+
+git log -p {
+    msotra todos os commits de forma detelhada;
+    pressione "enter" para ir até o final e "q" para finalizar
+}
+
+Link para pagina do git para comando de git log personalizado {
+    https://cursos.alura.com.br/course/git-github-controle-de-versao/task/57010#:~:text=hist%C3%B3rico%2C%20e%20em-,git%20log%20cheatsheet,-h%C3%A1%20v%C3%A1rios%20delas
+}
+
+.gitignore {
+    arquivo especial que dentro do repositorio avisa o git hub que os nomes dos arquivos dentro desse .gitignore serão ignorados pelo git;
+    e ele precisar estar sendo monitorado para conseguir ignorar os arquivos;
+}
+
+cd .. {
+    sobe uma pasta no repositorio/;
+}
+
+mkdir "nome" {
+    cria uma nova pasta;
+}
+
+cd "caminho ate a pasta/" {
+    entrar na pasta;
+}
+
+git log --pretty="format:%H"{
+    exibe um log personalizado;
+}
+
+git init --bare {
+    esse um repositorio puro, ele so contem as alterçoes dos arquivos;
+}
+
+git remote {
+    lsita todos os repositorios remotos;
+}
+
+git remote add "nome" "caminho ate a pasta " {
+    cria um repositorio que pode ser uma url ou uma pasta no computador
+}
+
+git remote -v {
+    mostra o endereço do repositorio remoto;
+}
+
+git clone "nome pasta" {
+    copia pela primeira vez uma pasta do repositorio;
+}
+
+git clone "caminho ate a pasta" "nome da pasta"{
+    copia pela primeira vez um repositorio e adiciona um nome na pasta;
+}
+
+git push local "nome repositorio" "o ramo de trabalho(branch)"{
+    envia arquivos para o servidor escolhido;
+}
+
+git remote rename "nome do repositorio" "novo nome do repositorio"{
+    renomeia o nome do repositorio;
+}
+
+git pull "nome repositorio" "o ramo de trabalho(branch)" {
+    copia todos os arquivos de um repositirio;
+}
+
+git push -u origin master {
+    o parametro -u faz o git hub lenbrar que semore que eu der o comando git push seja para o mesmo repositorio
+}
+
+git branch {
+    mostra o branch que estamos trabalhando;
+}
+git branch "nome" {
+    cria um novo branch
+}
+
+git checkout "nome do outro branch"{
+    troca de branch;
+}
+
+git checkout -br "nome do branch"{
+    troca de branch e ja cria o novo branchde uma vez
+}
+
+Error repositorio remoto ao enviar ou puxar {
+    Git: falha ao enviar os commits para o repositório remoto
+    31 de julho de 2022
+    Ronaldo B.
+    Talvez você já tenha passado por este problema, ao tentar executar o comando git push origin master você obtêm o seguinte erro: error: failed to push some refs to... e o link do servidor do repositório remoto.
+
+    Isso acontece normalmente porque você tem alterações no remoto mais novas que não existem no repositório local, por isso é preciso atualizar o local e resolver os conflitos se existir antes de enviar para o remoto.
+
+    Para atualizar o local execute o comando: git pull origin master
+
+    Se ainda assim o erro persistir significa que a origem de ambos repositórios são diferentes e por isso é preciso atualizar o local com a flag --allow-unrelated-histories, ou seja, você permite o git baixar o e unir as histórias não relacionadas com o repositório local.
+
+    Então o comando completo será: git pull origin master --allow-unrelated-histories
+
+    Após isso conseguirá enviar ou receber os seus commits normalmente.
+
+    OBS: Neste exemplo estamos supondo que o seu branch local é o master e o remoto está com o nome origin.
+}
+
+git merge "nome da branch" {
+    faz a união das duas branch; puxa tudo de outro branch
+}
+
+confirmar commit de merge ":X"
+
+git rebase "nome do branch atual" "nome do branch que quer trazer" {
+    adiciona todos os commit de um branch a outro;
+}
+
+git log --graph {
+    mostra a lista de logs em duas linhas com o branch;
+}
+
+git checkout -- "nome do arquivo" {
+    faz um Control z no arquivo. discartas as modificações feitas;
+}
+
+git reset HEAD "nome do arquivo" {
+    depois de dar um git add antes de fazer o commit esse comando discarta as alteraçoes mas ainda e preciso fazer
+    o git checkout;
+}
+
+git revert "numero do hash" {
+    desfaz um commit;
+}
+
+git stash {
+    salva as alteraçoes semi-definitivas;
+}
+
+git stash list {
+    lista de tudo oque esta salvo no stash;
+}
+
+git stash applay 0{
+    taz de volta aquelas modificações semi-definitivas com o numero do indece;
+}
+
+git stash drop 0 {
+    discartas as modificações semi definitivas;
+}
+
+git stash pop {
+    traz a ultima modificação a semi-definitivas e ja descarta ela da lista
+}
+
+git checkout "numero do hash" {
+    podemos voltar para outras versões do codigo pelo numero do hash
+    nessa campo voce não esta em nenhum branch
+}
+
+git checkout {
+    A descrição do comando git checkout --help, em uma tradução livre é: 
+    "Atualizar os arquivos na working tree para ficarem na versão especificada. 
+    [...]". Basicamente, podemos deixar o nosso código no estado do último commit de uma branch, 
+    de um commit específico, ou mesmo tags (que veremos adiante).
+}
+
+git diff "numero do hash".."numero do hash" {
+    com esse comando eu consigo ver todas as alteraçoes que foram feitas;
+}
+
+git diff {
+    mostra tudo que ainda não foi comitado;
+}
+
+git log -n 2 {
+    mostra somente os dois ultimos commites
+}
+
+git tag -a V0.1.0 -m "mensagem"{
+    define um marco na aplicação um ponto sempre salvo onde eu posso voltare também posso continuar apartir daqui;
+}
+
+git tag {
+    tags disponiveis
+}
+
+git push local V0.1.0 {
+    posso enviar uma versão para o servidor;
+}
+
